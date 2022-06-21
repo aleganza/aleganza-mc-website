@@ -22,13 +22,13 @@ body {
 nav {
     display: flex;
     justify-content: center;
+    background-color: var(--wp-element);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 nav ul {
-    width: 1600px;
-    background-color: var(--wp-element);
-    border-radius: 0 0 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 1400px;
+    
     list-style-type: none;
     /* border: 1px solid red; */
     margin: 0 40px;
@@ -41,7 +41,7 @@ nav ul li{
 }
 
 nav ul li a {
-    font-size: 18pt;
+    font-size: 20pt;
     text-decoration: none;
     transition: 0.2s;
 }
@@ -59,25 +59,64 @@ nav ul li a:hover {
 }
 
 .cards-wrapper {
-    width: 1600px;
+    width: 1400px;
     margin: 0 40px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.cards-row {
+.card {
     display: flex;
-    gap: 10px;
+    background-color: var(--wp-element);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    /* width: 50%; */
+    /* height: 100%; */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.card-left {
+    width: 50%;
+}
+
+.card .card-left img {
     width: 100%;
 }
 
-.cards .card {
-    background-color: var(--wp-element);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.card-right {
+    display: flex;
+    flex-direction: column;
     width: 50%;
-    height: 100px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card h1 {
+    color: var(--text-a);
+    font-weight: 200;
+}
+
+.card button {
+    background-color: transparent;
+    border: 2px solid var(--text-a);
+    font-size: 16pt;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    transition: 0.2s;
+}
+
+.card button:hover {
+    background-color: var(--text-a);
+    color: var(--wp-body);
+    cursor: pointer;
 }
 
 /* @media only screen and (max-width: 768px) {
