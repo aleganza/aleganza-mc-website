@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-    --wp-body: #333333;
-    --wp-element: #252525;
+    --wp-body: #313b44;
+    --wp-element: #313b44;
     --text-a: #FFFFFF;
     --text-b: #cfcfcf;
 }
@@ -17,108 +17,18 @@ body {
     background-color: var(--wp-body);
 }
 
-/* navbar */
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: var(--wp-element);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-
-nav ul {
-    width: 1400px;
-    
-    list-style-type: none;
-    /* border: 1px solid red; */
-    margin: 0 40px;
-    padding: 20px 0px;
-}
-
-nav ul li{
-    display: inline;
-    padding: 20px;
-}
-
-nav ul li a {
-    font-size: 20pt;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-nav ul li a:hover {
-    color: var(--text-a);
-}
-
-/* cards */
-
-.cards {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-
-.cards-wrapper {
-    width: 1400px;
-    margin: 0 40px;
-    /* display: flex;
-    flex-direction: column;
-    gap: 20px; */
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.card {
-    display: flex;
-    background-color: var(--wp-element);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    /* width: 50%; */
-    /* height: 100%; */
+img.banner {
     width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    gap: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-.card-left {
-    width: 50%;
+img.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
-
-.card .card-left img {
-    width: 100%;
-}
-
-.card-right {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    justify-content: center;
-    gap: 10px;
-}
-
-.card h1 {
-    color: var(--text-a);
-    font-weight: 200;
-}
-
-.card button {
-    background-color: transparent;
-    border: 2px solid var(--text-a);
-    font-size: 16pt;
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
-    transition: 0.2s;
-}
-
-.card button:hover {
-    background-color: var(--text-a);
-    color: var(--wp-body);
-    cursor: pointer;
-}
-
 /* @media only screen and (max-width: 768px) {
     body * {
         display: none;
