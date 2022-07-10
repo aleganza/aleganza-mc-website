@@ -3,6 +3,7 @@
 :root {
     --wp-body: rgb(87, 87, 87);
     --text-a: #E5790E;
+    --text-a-opacity: #e5790e85;
     --text-b: rgb(87, 87, 87);
     --primary: #FFB800;
     --secondary: black;
@@ -82,7 +83,8 @@ body {
     text-align: center;
 }
 
-.content a img.latest {
+.content .content-grid img.latest,
+.content .content-wrapper img.latest {
     width: 100%;
     align-items: center;;
     border-radius: 10px;
@@ -90,7 +92,8 @@ body {
     cursor: pointer;
 }
 
-.content a img.gallery {
+.content .content-grid img.gallery,
+.content .content-wrapper img.gallery {
     width: 100%;
     box-sizing: border-box;
     border-radius: 10px;
@@ -98,9 +101,76 @@ body {
     cursor: pointer;
 }
 
-.content img:hover {
+.content .content-grid img.gallery:hover,
+.content .content-wrapper img.gallery:hover,
+.content .content-grid img.latest:hover,
+.content .content-wrapper img.latest:hover {
     opacity: 0.8;
     transform: scale(1.01);
+}
+
+.content .modal-gallery {
+    display: none;
+    position: fixed;
+    background-color: var(--text-a-opacity);
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content .modal-gallery i {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    color: var(--wp);
+    transition: 0.3s;
+}
+
+.content .modal-gallery .modal-gallery-wrapper {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.content .modal-gallery .modal-gallery-wrapper img {
+    margin: 0 auto;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.content .modal-gallery .modal-gallery-wrapper .modal-gallery-buttons {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.content .modal-gallery .modal-gallery-wrapper .modal-gallery-buttons a {
+    text-decoration: none;
+}
+
+.content .modal-gallery .modal-gallery-wrapper .modal-gallery-buttons .button {
+    text-transform: capitalize;
+    width: 300px;
+    border: 2px solid var(--text-a);
+    color: var(--wp);
+    background-color: var(--text-a);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content .modal-gallery i:hover {
+    transform: scale(1.2);
 }
 
 footer {
