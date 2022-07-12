@@ -9,8 +9,28 @@
     --secondary: black;
     --wp: #F3F1E9;
 
-    --trn-1: 0.4s;
+    --trn-1: 0.3s ease-out;
 }
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--text-a-opacity);
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-a);
+  }
 
 * {
     margin: 0;
@@ -44,6 +64,31 @@ body {
     background-color: var(--wp);
 }
 
+/* --- fixed icons at the top of the page (NOT IN USE) ---  */
+
+/* .icons-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.icons-fixed a {
+    text-decoration: none;
+}
+
+.icons-fixed i {
+    font-size: 0.8rem;
+    color: var(--wp-body);
+}
+
+.icons-fixed i:hover {
+    color: var(--text-a);
+} */
+
+/* --- header --- */
+
 .header {
     display: flex;
     position: relative;
@@ -70,6 +115,8 @@ body {
 .header img.logo {
     top: 60px;
 }
+
+/* --- content --- */
 
 .content {
     background-color: var(--wp);
@@ -104,7 +151,7 @@ body {
 
 .content h2 {
     color: var(--text-b);
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: center;
 }
 
@@ -130,11 +177,11 @@ body {
 .content .content-wrapper img.gallery:hover,
 .content .content-grid img.latest:hover,
 .content .content-wrapper img.latest:hover {
-    opacity: 0.8;
-    transform: scale(1.01);
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-/* image download icon showing */
+/* --- image download icon showing --- */
 
 .content .content-grid .image-download {
     display: flex;
@@ -147,16 +194,17 @@ body {
     height: 100%;
 }
 
-.content .content-grid .image-download:hover i {
+/* decomment to show a download icon on hover */
+
+/* .content .content-grid .image-download:hover i {
     display: block;
     transition: var(--trn-1);
-}
+} */
 
-.content .content-grid .image-download:hover img {
-    opacity: 0.4;
-    /* transform: scale(1.01); */
-    filter: blur(2px);
-}
+/* .content .content-grid .image-download:hover img {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+} */
 
 .content .content-grid .image-download i {
     display: none;
@@ -167,7 +215,7 @@ body {
     transition: var(--trn-1);
 }
 
-/* modal gallery */
+/* --- modal gallery (NOT IN USE) --- */
 
 .content .modal-gallery {
     display: none;
@@ -232,6 +280,8 @@ body {
 .content .modal-gallery i:hover {
     transform: scale(1.2);
 }
+
+/* --- footer --- */
 
 footer {
     background-color: var(--wp-body);
