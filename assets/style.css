@@ -5,6 +5,7 @@
     --color-2: #293443;
     --color-3: #8d8d8d;
     --color-4: #dddddd;
+    --color-5: #0099FA;
 
     --transition-1: 0.3s ease-out;
 }
@@ -38,53 +39,71 @@ body {
     background-color: var(--color-1);
 }
 
-.navbar {
+nav {
     /* display: flex;
     justify-content: center; */
     margin-top: 15px;
 }
 
-.navbar .navbar-wrapper {
+nav .nav-wrapper {
     display: flex;
     align-items: center;
     margin: auto;
-    width: 1280px;
-    gap: 20px;
+    max-width: 1280px;
 }
 
 /* navbar items */
 
-.navbar ul.items {
+nav ul.items {
     /* border: 1px solid red; */
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
 }
 
-.navbar img {
+nav img {
     width: 160px;
     height: 100%;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px;
 }
 
-.navbar ul.items li {
+nav ul.items li {
     display: inline;
-    margin: 15px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
 }
 
-.navbar ul.items li a {
+nav ul.items li a {
     text-decoration: none;
     color: var(--color-3);
     font-weight: 700;
     transition: var(--transition-1);
 }
 
-.navbar ul.items li a:hover {
+nav ul.items li a:hover {
     color: var(--color-4);
+}
+
+/* active element */
+
+nav ul.items li.active {
+    border: 2px solid var(--color-5);
+}
+
+nav ul.items li.active a {
+    color: var(--color-5);
+}
+
+nav ul.items li.active a:hover {
+    color: var(--color-5);
 }
 
 /* navbar links */
 
-.navbar ul.links {
+nav ul.links {
     /* border: 1px solid red; */
     text-align: right;
     width: 40%;
@@ -92,23 +111,32 @@ body {
     box-sizing: border-box;
 }
 
-.navbar img {
-    width: 160px;
-    height: 100%;
-}
-
-.navbar ul.links li {
+nav ul.links li {
     display: inline;
     margin: 10px;
 }
 
-.navbar ul.links li a {
+nav ul.links li a {
     text-decoration: none;
     color: var(--color-3);
     font-weight: 700;
     transition: var(--transition-1);
 }
 
-.navbar ul.links li a:hover {
+nav ul.links li a:hover {
     color: var(--color-4);
+}
+
+/* main */
+
+main {
+    margin-top: 15px;
+}
+
+main .main-wrapper {
+    margin: auto;
+    width: 1280px;
+    height: 500px;
+    background-color: var(--color-2);
+    border-radius: 15px;
 }
