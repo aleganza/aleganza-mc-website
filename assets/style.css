@@ -13,6 +13,20 @@
     --transition-1: 0.3s ease-out;
 }
 
+/* Scroll 3 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-2);
+    border-radius: 10px;
+}
+
 * {
     margin: 0;
     font-family: 'Albert Sans', sans-serif;
@@ -22,8 +36,8 @@
     font-size: 14pt;
 }
 
-/* each image is unselectable */
-img {
+/* everything is unselectable */
+* {
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -41,6 +55,10 @@ img {
  */
 body {
     background-color: var(--color-1);
+}
+
+.mobile {
+    display: none;
 }
 
 nav {
@@ -185,15 +203,9 @@ main .main-section .texture-section .texture:hover {
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-/* add-on */
-
-/* main .main-section .texture-section .texture:hover {
-    border: 2px solid var(--color-4);
-} */
-
 main .main-section .texture-section .texture img {
     height: 170px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 main .main-section .texture-section .texture .info {
@@ -254,6 +266,8 @@ footer {
     justify-content: center; */
     padding: 30px 0;
     background-color: var(--color-8);
+    position: absolute;
+    width: 100%;
 }
 
 footer .footer-wrapper {
@@ -267,4 +281,57 @@ footer .footer-wrapper {
 
 footer .footer-wrapper h1 {
     font-weight: 500;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width:1280px) {
+
+    * {
+        font-size: 10pt;
+    }
+
+    nav .nav-wrapper {
+        max-width: 850px;
+    }
+
+    main .main-wrapper {
+        width: 850px;
+    }
+
+    main .main-section .texture-section .texture img {
+        height: 145px;
+    }
+
+    footer .footer-wrapper {
+        max-width: 850px;
+    }
+}
+
+@media only screen and (max-width:850px) {
+
+    body {
+        height: 100vh;
+    }
+
+    .mobile {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile h2 {
+        line-height: 30px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    nav, main {
+        display: none;
+    }
+
+    footer {
+        bottom: 0;
+    }
 }
