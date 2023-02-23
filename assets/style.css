@@ -183,17 +183,17 @@ main .main-section h1 {
     margin: 0 10px;
 }
 
-main .main-section .texture-section {
+main .main-section .items-section {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-main .main-section .texture-section a  {
+main .main-section .items-section a  {
     text-decoration:  none;
 }
 
-main .main-section .texture-section .texture {
+main .main-section .items-section .items {
     display: flex;
     gap: 20px;
     padding: 10px;
@@ -201,33 +201,33 @@ main .main-section .texture-section .texture {
     border-radius: 20px;
 }
 
-main .main-section .texture-section .texture:hover {
+main .main-section .items-section .items:hover {
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-main .main-section .texture-section .texture img {
+main .main-section .items-section .items img {
     height: 170px;
     border-radius: 5px;
 }
 
-main .main-section .texture-section .texture .info {
+main .main-section .items-section .items .info {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-main .main-section .texture-section .texture .info .title h2 {
+main .main-section .items-section .items .info .title h2 {
     font-size: 1.8rem;
     padding-bottom: 5px;
 }
 
-main .main-section .texture-section .texture .info .attrs {
+main .main-section .items-section .items .info .attrs {
     display: flex;
     gap: 10px;
     padding-bottom: 20px;
 }
 
-main .main-section .texture-section .texture .info .attrs h2{
+main .main-section .items-section .items .info .attrs h2{
     font-size: 0.8rem;
     font-weight: 600;
     padding: 10px;
@@ -236,28 +236,28 @@ main .main-section .texture-section .texture .info .attrs h2{
     background-color: var(--color-6);
 }
 
-main .main-section .texture-section .texture .info .content {
+main .main-section .items-section .items .info .content {
     display: flex;
     gap: 20px;
     padding-bottom: 20px;
 }
 
-main .main-section .texture-section .texture .info .content h2 {
+main .main-section .items-section .items .info .content h2 {
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--color-3);
 }
 
-main .main-section .texture-section .texture .info .content h2 i {
+main .main-section .items-section .items .info .content h2 i {
     color: var(--color-3);
 }
 
-main .main-section .texture-section .texture .info .date {
+main .main-section .items-section .items .info .date {
     display: flex;
     gap: 50px;
 }
 
-main .main-section .texture-section .texture .info .date h2{
+main .main-section .items-section .items .info .date h2{
     font-weight: 500;
 }
 
@@ -301,7 +301,7 @@ footer .footer-wrapper h1 {
         width: 850px;
     }
 
-    main .main-section .texture-section .texture img {
+    main .main-section .items-section .items img {
         height: 145px;
     }
 
