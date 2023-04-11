@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
-    <title>aleganza</title>
-    <link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+        <title>aleganza</title>
+        <link rel="stylesheet" href="/assets/style.css">
+        <script type="module" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="module" src="https://kit.fontawesome.com/223615c47d.js" crossorigin="anonymous"></script>
+        <script type="module" src="/assets/script.js"></script>
+    </head>
+    <body>
 
     <!-- navbar -->
 
@@ -77,6 +80,8 @@
         <div class="main-wrapper">
             <div id="textures" class="main-section">
                 <h1>Mods</h1>
+                <button onclick="fetchAPI()">Click me</button>
+
                 <div class="items-section">
                     <a href="https://www.curseforge.com/minecraft/mc-mods/plenty-of-armors/" target="_blank">
                         <div class="items">
@@ -115,8 +120,5 @@
         </div>
     </footer>
 
-    <script type="module" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="module" src="https://kit.fontawesome.com/223615c47d.js" crossorigin="anonymous"></script>
-    <script type="module" src="../assets/script.js"></script>
 </body>
 </html>
