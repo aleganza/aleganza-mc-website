@@ -1,3 +1,12 @@
+async function fetchAPI() {
+    const url = "https://api.modrinth.com/v2/project/plenty-of-armors";
+
+    const response = await fetch(url);
+    const json = await response.json();
+
+    console.log(json);
+}
+
 // banner
 
 let banner = $("#banner");
