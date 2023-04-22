@@ -10,7 +10,7 @@
     --color-7: #353d47;
     --color-8: #181f27;
 
-    --transition-1: 0.3s ease-out;
+    --transition-1: all 0.2s ease;
 }
 
 /* Scroll 3 */
@@ -65,6 +65,7 @@ nav {
     /* display: flex;
     justify-content: center; */
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 nav .nav-wrapper {
@@ -92,20 +93,29 @@ nav img {
 
 nav ul.items li {
     display: inline;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 30px;
+    margin: 2px;
+    transition: var(--transition-1);
 }
 
 nav ul.items li a {
+    padding: 10px 16px;
+    border-radius: 30px;
     text-decoration: none;
     color: var(--color-3);
     font-weight: 700;
     transition: var(--transition-1);
 }
 
-nav ul.items li a:hover {
+nav ul.items li a.active {
     color: var(--color-4);
+}
+
+nav ul.items a:hover {
+    background-color: var(--color-2);
+    color: var(--color-4);
+}
+nav ul.items a:active {
+    filter: brightness(90%);
 }
 
 nav ul.items li a.disabled {
@@ -116,20 +126,6 @@ nav ul.items li a.disabled {
 nav ul.items li a.disabled:hover {
     color: var(--color-7);
 }
-
-/* active element */
-
-/* nav ul.items li.active {
-    border: 2px solid var(--color-5);
-}
-
-nav ul.items li.active a {
-    color: var(--color-5);
-}
-
-nav ul.items li.active a:hover {
-    color: var(--color-5);
-} */
 
 /* navbar links */
 
@@ -199,10 +195,14 @@ main .main-section .items-section .items {
     padding: 10px;
     border: 2px solid transparent;
     border-radius: 20px;
+
+    transition: var(--transition-1);
 }
 
 main .main-section .items-section .items:hover {
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color: var(--color-1);
+
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
 }
 
 main .main-section .items-section .items img {
