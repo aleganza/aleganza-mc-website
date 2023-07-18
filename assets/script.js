@@ -1,33 +1,21 @@
-async function fetchAPI() {
-    const url = "https://api.modrinth.com/v2/project/plenty-of-armors";
+let nav_main =  $("#nav-mods")
+let nav_textures =  $("#nav-textures")
 
-    const response = await fetch(url);
-    const json = await response.json();
+let main_mods = $("#main-mods")
+let main_textures = $("#main-textures")
 
-    console.log(json);
-}
+nav_textures.click(() => { 
+    nav_textures.addClass("active")
+    nav_main.removeClass("active")
 
-// banner
-
-let banner = $("#banner");
-
-$(window).scroll(function () {
-    let scroll = $(window).scrollTop();
-    console.log(scroll);
-
-    banner.css("top", scroll*0.8 + "px");
+    main_mods.css("display", "none")
+    main_textures.css("display", "block")
 });
 
-// modal image gallery
+nav_main.click(() => { 
+    nav_main.addClass("active")
+    nav_textures.removeClass("active")
 
-let open = $("#open-modal");
-
-open.click(function () {
-    open.parent().find(".modal-gallery").css("display", "block");
-});
-
-let close = $("#close-modal");
-
-close.click(function () {
-    close.parent().css("display", "none");
+    main_textures.css("display", "none")
+    main_mods.css("display", "block")
 });

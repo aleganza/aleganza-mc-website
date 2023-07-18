@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --color-1: #1f2833;
@@ -10,7 +11,7 @@
     --color-7: #353d47;
     --color-8: #181f27;
 
-    --transition-1: all 0.2s ease;
+    --transition-1: all 0.1s ease;
 }
 
 /* Scroll 3 */
@@ -30,10 +31,10 @@
 * {
     margin: 0;
     font-family: 'Albert Sans', sans-serif;
-    /* font-family: 'Press Start 2P', cursive; */
+    font-family: 'Poppins', sans-serif;
 
     color: var(--color-4);
-    font-size: 14pt;
+    font-size: 12pt; /* 14 with Albert Sans */
 }
 
 /* everything is unselectable */
@@ -62,10 +63,12 @@ body {
 }
 
 nav {
-    /* display: flex;
-    justify-content: center; */
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+nav * {
+    font-size: 1.2rem;
 }
 
 nav .nav-wrapper {
@@ -97,33 +100,34 @@ nav ul.items li {
     transition: var(--transition-1);
 }
 
-nav ul.items li a {
+nav ul.items li span {
     padding: 10px 16px;
     border-radius: 30px;
     text-decoration: none;
     color: var(--color-3);
     font-weight: 700;
+    cursor: pointer;
     transition: var(--transition-1);
 }
 
-nav ul.items li a.active {
+nav ul.items li span.active {
     color: var(--color-4);
 }
 
-nav ul.items a:hover {
+nav ul.items span:hover {
     background-color: var(--color-2);
     color: var(--color-4);
 }
-nav ul.items a:active {
+nav ul.items span:active {
     filter: brightness(90%);
 }
 
-nav ul.items li a.disabled {
+nav ul.items li span.disabled {
     color: var(--color-7);
     cursor: default;
 }
 
-nav ul.items li a.disabled:hover {
+nav ul.items li span.disabled:hover {
     color: var(--color-7);
 }
 
@@ -160,6 +164,13 @@ html,
 main, 
 body {
     min-height: 100vh; /* footer at the bottom when the page is not high enough */
+}
+
+main#main-mods {
+    display: block;
+}
+main#main-textures {
+    display: none;
 }
 
 main .main-wrapper {
@@ -290,11 +301,15 @@ footer .footer-wrapper h1 {
 @media only screen and (max-width:1280px) {
 
     * {
-        font-size: 10pt;
+        font-size: 9pt; /* 10 with Albert Sans */
     }
 
     nav .nav-wrapper {
         max-width: 850px;
+    }
+    
+    nav ul.links {
+        width: 50%;
     }
 
     main .main-wrapper {
