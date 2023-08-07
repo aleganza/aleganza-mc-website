@@ -69,6 +69,8 @@ body {
     display: none;
 }
 
+/* navbar items */
+
 nav {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -138,6 +140,16 @@ nav ul.items li span.disabled:hover {
     color: var(--color-7);
 }
 
+/* itch.io */
+
+#normal-screen-iframe {
+    display: block;
+}
+
+#mobile-iframe {
+    display: none;
+}
+
 /* main */
 
 html, 
@@ -159,6 +171,7 @@ main .main-wrapper {
     background-color: var(--color-2);
     border-radius: var(--radius);
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 main .main-section {
@@ -320,7 +333,7 @@ footer .footer-wrapper .links li a {
 }
 
 footer .footer-wrapper .links li a i{
-    font-size: 20px;
+    font-size: 1.7rem;
     color: var(--color-3);
     transition: var(--transition-1);
 }
@@ -335,24 +348,14 @@ footer .footer-wrapper .links li a i{
         font-size: 9pt; /* 10 with Albert Sans */
     }
 
-    nav .nav-wrapper {
+    nav .nav-wrapper,
+    main .main-wrapper,
+    footer .footer-wrapper {
         max-width: 850px;
-    }
-    
-    nav ul.links {
-        width: 50%;
-    }
-
-    main .main-wrapper {
-        width: 850px;
     }
 
     main .main-section .items-section .items img {
         height: 145px;
-    }
-
-    footer .footer-wrapper {
-        max-width: 850px;
     }
 }
 
@@ -362,25 +365,57 @@ footer .footer-wrapper .links li a i{
         height: 100vh;
     }
 
-    .mobile {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    nav .nav-wrapper {
+        flex-direction: column;
     }
 
-    .mobile h2 {
-        line-height: 30px;
-        font-size: 1.4rem;
-        font-weight: 500;
+    nav .nav-wrapper .items {
         text-align: center;
     }
 
-    nav, main {
+    #mobile-iframe {
+        display: block;
+        margin: auto;
+    }
+    
+    #normal-screen-iframe {
         display: none;
     }
 
-    footer {
-        bottom: 0;
+    main .main-wrapper {
+        width: 300px;
+        padding: 0px;
+    }
+    
+    main .main-section h1 {
+        text-align: center;
+        font-size: 2.6rem;
+    }
+    
+    main .main-section .items-section .items {
+        flex-direction: column;
+    }
+    
+    main .main-section .items-section .items img {
+        height: auto;
+    }
+    
+    main .main-section .items-section .items .info .title h2 {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+    
+    main .main-section .items-section .items .info .attrs {
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+    
+    main .main-section .items-section .items .info .content {
+        display: none;
+    }
+    
+    main .main-section .items-section .items .info .date {
+        display: none;
     }
 }

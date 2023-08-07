@@ -21,8 +21,8 @@ nav_main.click(() => {
     main_a.css("display", "block")
 });
 
-// fix that when going from mobile to other screens, no main sections were shown
-$(window).resize(() => {
+// fix that when going from mobile to other screens, no main sections were shown (old, can now open on mobile)
+/* $(window).resize(() => {
     if($(window).width() <= 850) {
         main_b.css("display", "none")
         main_a.css("display", "none")
@@ -33,4 +33,4 @@ $(window).resize(() => {
             main_b.css("display", "block")
         }
     }
-})
+}) */
